@@ -17,11 +17,11 @@ jobs:
         sudo apt install libc6-dev clang flex bison libssl-dev bc python3 python2 zip unzip git lld llvm gcc-arm-linux-gnueabi
         mkdir -p $GITHUB_WORKSPACE/kernel_workspace
         
-    - name: Download Proton-clang
+    - name: Download SDClang
       run: |
         cd $GITHUB_WORKSPACE/kernel_workspace
-        git clone https://github.com/xiangfeidexiaohuo/Snapdragon-LLVM.git snapdragon-clang --depth=1
-        export PATH="$GITHUB_WORKSPACE/kernel_workspace/snapdragon-clang/bin:$PATH"
+        git clone https://github.com/ZyCromerZ/SDClang.git SDClang --depth=1
+        export PATH="$GITHUB_WORKSPACE/kernel_workspace/SDClang/bin:$PATH"
         
     - name: Download kernel source
       run: |
