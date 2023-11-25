@@ -20,7 +20,7 @@ jobs:
     - name: Download Proton-clang
       run: |
         cd $GITHUB_WORKSPACE/kernel_workspace
-        git clone https://github.com/xiangfeidexiaohuo/Snapdragon-LLVM snapdragon-clang --depth=1
+        git clone https://github.com/xiangfeidexiaohuo/Snapdragon-LLVM.git snapdragon-clang --depth=1
         export PATH="$GITHUB_WORKSPACE/kernel_workspace/snapdragon-clang/bin:$PATH"
         
     - name: Download kernel source
