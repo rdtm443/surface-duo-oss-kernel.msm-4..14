@@ -38,7 +38,7 @@ jobs:
         cd $GITHUB_WORKSPACE/kernel_workspace/surface-duo-oss-kernel.msm-4..14
         clang -v
         make O=out ARCH=arm64 CC=clang surfaceduo-perf_defconfig
-        make O=out ARCH=arm64 CC=clang CROSS_COMPILE=aarch64-linux-gnu- CROSS_COMPILE_ARM32=arm-linux-gnueabi- AR=llvm-ar NM=llvm-nm OBJCOPY=llvm-objcopy OBJDUMP=llvm-objdump STRIP=llvm-strip -j12
+        make O=out ARCH=arm64 CC=clang CROSS_COMPILE=aarch64-linux-gnu- CROSS_COMPILE_ARM32=arm-linux-gnueabi- AR=llvm-ar NM=llvm-nm OBJCOPY=llvm-objcopy OBJDUMP=llvm-objdump STRIP=llvm-strip LD=ld.lld -j12
         
     - name: Building Flashable Zip
       run: |
