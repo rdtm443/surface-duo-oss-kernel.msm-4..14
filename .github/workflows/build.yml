@@ -17,11 +17,11 @@ jobs:
         sudo apt install libc6-dev clang flex bison libssl-dev bc python3 python2 zip unzip git lld llvm gcc-arm-linux-gnueabi
         mkdir -p $GITHUB_WORKSPACE/kernel_workspace
         
-    - name: Download SDClang
+    - name: Download Proton Clang
       run: |
         cd $GITHUB_WORKSPACE/kernel_workspace
-        git clone -b 12 https://github.com/ZyCromerZ/SDClang.git SDClang --depth=1
-        export PATH="$GITHUB_WORKSPACE/kernel_workspace/SDClang/bin:$PATH"
+        git clone -b 12 https://github.com/kdrag0n/proton-clang.git proton-clang --depth=1
+        export PATH="$GITHUB_WORKSPACE/kernel_workspace/proton-clang/bin:$PATH"
         
     - name: Download kernel source
       run: |
