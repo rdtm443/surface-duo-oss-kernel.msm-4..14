@@ -20,7 +20,7 @@ jobs:
     - name: Download SDClang
       run: |
         cd $GITHUB_WORKSPACE/kernel_workspace
-        git clone https://github.com/ZyCromerZ/SDClang.git SDClang --depth=1
+        git clone -b 12 https://github.com/ZyCromerZ/SDClang.git SDClang --depth=1
         export PATH="$GITHUB_WORKSPACE/kernel_workspace/SDClang/bin:$PATH"
         
     - name: Download kernel source
