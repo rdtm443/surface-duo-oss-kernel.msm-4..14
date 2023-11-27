@@ -20,7 +20,7 @@ jobs:
     - name: Download Proton Clang
       run: |
         cd $GITHUB_WORKSPACE/kernel_workspace
-        git clone -b 12 https://github.com/kdrag0n/proton-clang.git proton-clang --depth=1
+        git clone https://github.com/kdrag0n/proton-clang.git proton-clang --depth=1
         export PATH="$GITHUB_WORKSPACE/kernel_workspace/proton-clang/bin:$PATH"
         
     - name: Download kernel source
